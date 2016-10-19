@@ -1,3 +1,6 @@
+.brand-logo {
+  margin-left: 15px;
+}
 #index-banner {
   background-image: url('../img/hero.jpg');
   /*background-size: cover;*/
@@ -12,4 +15,13 @@
 
 .titleTag {
   font-size: .5em;
+}
+
+#title {
+  font-size: 1em;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-floating),
+ .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating):hover {
+  color: #e91e63;
 }
