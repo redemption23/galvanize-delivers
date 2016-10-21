@@ -25,3 +25,7 @@
  .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating):hover {
   color: #e91e63;
 }
+
+h1 {
+  margin-top: 0;
+}
