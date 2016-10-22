@@ -120,25 +120,25 @@
           </table>
           <br/>
 
-          <form class="col s12">
+          <form id="orderForm" class="col s12">
               <div class="row">
                 <div class="input-field col s12">
                   <i class="material-icons prefix pink-text">account_circle</i>
-                  <input id="icon_prefix" type="text" class="validate">
-                  <label for="icon_prefix">Name</label>
+                  <input id="icon_prefix" type="text" class="validate fullName">
+                  <label for="icon_prefix">Full Name</label>
                 </div><!-- input-field -->
                 <div class="input-field col s12">
                   <i class="material-icons prefix pink-text">phone</i>
-                  <input id="icon_prefix" type="text" class="validate" required>
+                  <input id="icon_prefix" type="text" class="validate phoneNumber">
                   <label for="icon_prefix">Phone number</label>
                 </div><!-- input-field -->
                 <div class="input-field col s12">
                   <i class="material-icons prefix pink-text">business</i>
-                  <textarea id="textarea1" class="materialize-textarea"></textarea>
+                  <textarea id="textarea1" class="materialize-textarea address"></textarea>
                   <label for="textarea1">Address</label>
                 </div><!-- input-field -->
                 <div class="input-field col s12 center-align">
-                  <button class="btn waves-effect pink waves-light" type="submit" name="action" id ="submitOrder">Submit</button>
+                  <button class="btn waves-effect pink waves-light" type="submit" name="action" href="#/" id="submitOrder">Submit</button>
               </div><!-- input-field -->
               </div><!-- row -->
             </form>
