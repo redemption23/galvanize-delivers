@@ -3,14 +3,13 @@
 }
 #index-banner {
   background-image: url('../img/hero.jpg');
-  /*background-size: cover;*/
+  background-size: cover;
   height: 500px;
 }
 
 .material-icons {
   font-size: 1em;
-  display: flex;
-  justify-content: space-around;
+  display: inline;
 }
 
 .titleTag {
