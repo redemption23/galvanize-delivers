@@ -2,6 +2,7 @@
 $(document).ready(function(){
   var shoppingCart = $('#shopping_cart>tbody');
   var cartSubTotal = $('#shopping_cart>tfoot>tr#subTotal');
+  var submitButton = $('#submitOrder');
   var subTotal = 0;
   var tax = $('#shopping_cart>tfoot>tr#tax');
   var total = $('#shopping_cart>tfoot>tr#total')
@@ -46,5 +47,19 @@ $(document).ready(function(){
     $('#tax').text('$ ' + tax.toFixed(2));
     $('#total').text('$ ' + total.toFixed(2));
   }
+
+  // validate submit form
+
+  // When click on submit button
+
+    // form needs to be validated
+
+      // for full name
+
+      // for valid email address
+
+      // for valid postal address
+
+
 
 });
