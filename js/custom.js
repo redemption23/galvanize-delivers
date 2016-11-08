@@ -1,12 +1,12 @@
 'use strict';
 $(document).ready(function(){
   var shoppingCart = $('#shopping_cart>tbody');
-  var cartSubTotal = $('#shopping_cart>tfoot>tr#subTotal');
+  var cartSubTotal = $('#subTotal');
   var custInfo = $('#orderForm');
   var submitButton = $(':button#submitOrder');
   var subTotal = 0;
   var tax = $('#shopping_cart>tfoot>tr#tax');
-  var total = $('#shopping_cart>tfoot>tr#total')
+  var total = $('#shopping_cart>tfoot>tr#total');
   var burger = $("div#burger>a");
   var pizza = $("div#arugala>a");
   var swine = $("div#swine>a");
@@ -34,7 +34,7 @@ $(document).ready(function(){
   function updatePrices() {
     var tax = Math.round((subTotal * 0.028) * 100) / 100;
     var total = subTotal + tax;
-    $('#subTotal').text('$ ' + subTotal.toFixed(2));
+    cartSubTotal.text('$ ' + subTotal.toFixed(2));
     $('#tax').text('$ ' + tax.toFixed(2));
     $('#total').text('$ ' + total.toFixed(2));
   }
@@ -54,7 +54,7 @@ $(document).ready(function(){
     });
     swine.click(function() {
       shoppingCart.append('<tr><td>' + menuItems.swine.name + '</td><td class="right-align">' + menuItems.swine.price + '</td></tr>');
-      Materialize.toast('Smoke Swine added.', 3000);
+      Materialize.toast('Smoked Swine added.', 3000);
       subTotal += (menuItems.swine.price);
       updatePrices();
     });
@@ -66,11 +66,11 @@ $(document).ready(function(){
       });
 
   // validate submit form
-  submitButton.click(function(){
+  submitButton.click(function(e){
     var fullName = $(':input.fullName');
     var phoneNumber = $(':input.phoneNumber');
     var address = $(':input.address');
-
+    e.preventDefault();
     if(shoppingCart.children().length < 1){
       Materialize.toast('Your cart is empty. Please choose an item.', 3000);
     } else {

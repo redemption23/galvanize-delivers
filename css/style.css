@@ -4,12 +4,11 @@
 #index-banner {
   background-image: url('../img/hero.jpg');
   background-size: cover;
-  height: 500px;
+  height: 100vh;
 }
 
 .material-icons {
   font-size: 1em;
-  display: inline;
 }
 
 .titleTag {
